@@ -1,5 +1,7 @@
 cd /home/mxr/Server/misi-site
 
+pm2 delete misi-site
+
 git fetch
 git checkout production
 git pull origin production
@@ -17,5 +19,6 @@ cd ..
 
 echo Built and copied
 
-pm2 restart misi-site
+PORT=7077
+pm2 start server.js --name misi-site
 echo Restarted server
