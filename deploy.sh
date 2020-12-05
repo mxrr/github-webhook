@@ -17,5 +17,5 @@ cd ..
 
 echo Built and copied
 
-pm2 restart misi-site --update-env
+pm2 restart misi-site
 echo Restarted server
